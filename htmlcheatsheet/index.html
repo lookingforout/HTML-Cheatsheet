@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HTML Cheatsheet</title>
+    <title>The Ultimate WebPage Cheet Sheet</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>HTML Cheatsheet</h1>
+        <h1>HTML & CSS Cheatsheet</h1>
     </header>
     <main>
         <section>
+            <div class="logo">
+            <img src="htmllogo.png" class="logos">
+            </div>
             <h2>1. Основни структурни тагове</h2>
             <article>
                 <h3>&lt;html&gt;</h3>
@@ -243,9 +246,286 @@
                 <p>Представя измерване в определен диапазон, като процент.</p>
             </article>
         </section>
+
+        <section>
+            <div class="logo">
+            <img src="csslogo.png" class="logos">
+            </div>
+            
+            <h2>1. CSS Свойства</h2>
+            <article>
+                <h3>Цветове и фонове</h3>
+                <p><strong>color</strong>: Определя цвета на текста.</p>
+                <p><strong>background-color</strong>: Определя цвета на фона.</p>
+                <p><strong>background-image</strong>: Настройва изображение за фон.</p>
+                <p><strong>opacity</strong>: Регулира прозрачността на елемента.</p>
+            </article>
+
+            <article>
+                <h3>Текст и шрифтове</h3>
+                <p><strong>font-family</strong>: Определя типа шрифт.</p>
+                <p><strong>font-size</strong>: Задава размера на текста.</p>
+                <p><strong>text-align</strong>: Определя подравняването на текста.</p>
+            </article>
+
+            <article>
+                <h3>Бокс модел</h3>
+                <p><strong>margin</strong>: Определя външния отстъп около елемента.</p>
+                <p><strong>padding</strong>: Определя вътрешния отстъп.</p>
+                <p><strong>border</strong>: Определя рамка около елемента.</p>
+                <p><strong>box-shadow</strong>: Добавя сянка на елемента.</p>
+            </article>
+
+            <article>
+                <h3>Позициониране и оформление</h3>
+                <p><strong>display</strong>: Настройва стила на показване на елемента.</p>
+                <p><strong>position</strong>: Определя позицията на елемента (relative, absolute, fixed).</p>
+                <p><strong>flex</strong>: Позволява гъвкаво оформление.</p>
+            </article>
+
+            <article>
+                <h3>Преходи и анимации</h3>
+                <p><strong>transition</strong>: Определя преход за стилове.</p>
+                <p><strong>animation</strong>: Позволява анимации на елементи.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>2. CSS Селектори</h2>
+            <article>
+                <h3>Универсален селектор</h3>
+                <p><code>*</code>: Избира всички елементи.</p>
+            </article>
+            <article>
+                <h3>Селектор по тип</h3>
+                <p><code>div, p, h1</code> и др: Избира елементи по техния тип.</p>
+            </article>
+            <article>
+                <h3>Селектор по клас</h3>
+                <p><code>.classname</code>: Избира елементи с определен клас.</p>
+            </article>
+            <article>
+                <h3>Селектор по ID</h3>
+                <p><code>#idname</code>: Избира елементи с определено ID.</p>
+            </article>
+            <article>
+                <h3>Псевдо-класове</h3>
+                <p><code>:hover, :active, :focus</code>: Стилове при определени действия.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>3. CSS шаблони с примери</h2>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Центриране на елемент</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+}
+                        </code></pre>
+                        <p><b>Описание:</b> Центрира елемент хоризонтално в контейнера му.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="centered example-box">So centered</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Сянка на елемент</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+.shadow {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+                        </code></pre>
+                        <p><b>Описание:</b> Добавя сянка с леко размазване.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="shadow example-box">So shadowy</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Hover ефект над елемент</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+.hover-effect:hover {
+    color: #B32113;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+                        </code></pre>
+                        <p><b>Описание:</b> Променя цвета и увеличава размера при hover.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="hover-effect example-box">Hover me</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Респонсив грид оформление</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+                        </code></pre>
+                        <p><b>Описание:</b> Грид оформление, което се адаптира към различни размери на екрана.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="grid-layout example-grid">
+                            <div class="example-box">Eha</div>
+                            <div class="example-box">Meow</div>
+                            <div class="example-box">Vkusno</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Центриране с Flexbox</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+                        </code></pre>
+                        <p><b>Описание:</b> Центрира съдържанието хоризонтално и вертикално с Flexbox.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="flex-center example-box">Flexbox centering</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Закръглени ъгли</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+            .rounded-corners {
+                border-radius: 15px;
+                padding: 20px;
+                background-color: #f0f0f0;
+            }
+                        </code></pre>
+                        <p><b>Описание:</b> Закръгля ъглите на елемента.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="rounded-corners example-box">So roundy!</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Сянка на текст</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+            .text-shadow {
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                font-size: 1.2em;
+            }
+                        </code></pre>
+                        <p><b>Описание:</b> Добавя сянка на текста, за да изглежда изпъкващ.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="text-shadow example-box">Wow Shadows!</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Бордър при hover</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+            .border-hover:hover {
+                border: 2px solid #B32113;
+                transition: border 0.3s ease;
+            }
+                        </code></pre>
+                        <p><b>Описание:</b> Показва бордър при hover върху елемента.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="border-hover example-box">Бордър ефект при задържане</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Фоново изображение на цял екран</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+            .full-width-bg {
+                background-image: url('path/to/image.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 300px;
+            }
+                        </code></pre>
+                        <p><b>Описание:</b> Фоново изображение, което покрива цялата ширина на елемента.</p>
+                    </div>
+                    <div class="example-container">
+                        <div class="full-width-bg example-box">Фоново изображение</div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="template-content">
+                    <div>
+                        <h3>Анимация за поява</h3>
+                        <p>CSS код:</p>
+                        <pre><code>
+            .fade-in {
+                opacity: 0;
+                animation: fadeIn 1.5s forwards;
+                padding: 20px;
+                background-color: #f0f0f0;
+                text-align: center;
+                margin: 0 auto;
+                width: 50%;
+            }
+            
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+                        </code></pre>
+                        <p><b>Описание:</b> Плавна поява на елемента.</p>
+                    </div>
+                    <div class="example-container">
+                        <img class="fade-in example-box" src="peekaboo.jpg">
+                    </div>
+                </div>
+            </article>                                         
+        </section>
     </main>
     <footer>
-        <p>Sofia-Emili Andreeva</p>
+        <p>Sofia-Emili Andreeva™</p>
+        <h3>Sources:</h3>
+        <a href="https://www.w3schools.com"> W3Schools</a>
+        <a href="https://htmlcheatsheet.com/css/">CSS Cheat Sheet</a>
     </footer>
 </body>
 </html>
